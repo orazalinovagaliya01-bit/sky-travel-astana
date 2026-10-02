@@ -1,0 +1,1629 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sky Travel Astana — подбор туров из Казахстана</title>
+<meta name="description" content="Подберём отдых мечты из Казахстана за 1 минуту: укажите месяц, бюджет и состав семьи — и сразу увидите, куда лучше поехать.">
+<meta name="theme-color" content="#1E90E0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E90E0'/%3E%3Cpath fill='%23fff' d='M52 32c0 2-2.6 3.3-5.3 3.3H34L23.4 51h-5.3l5.3-15.7H12.9l-4 6H5l2.6-9.3L5 22.7h4l4 6h10.5L18.1 13h5.3L34 28.7h12.7C49.4 28.7 52 30 52 32z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky-50:#F2F9FF; --sky-100:#E3F2FF; --sky-200:#C2E3FF; --sky-300:#8CCBFA; --sky-400:#4FB0F2;
+  --sky-500:#1E90E0; --sky-600:#1474C2; --sky-800:#0B3F73; --navy:#0A2A4C;
+  --ink:#0F2B4A; --muted:#5B7392; --line:#DCEBF8;
+  --sun:#FF9F1C; --sun-600:#F0820A; --gold:#FFC74A; --sun-50:#FFF6E8;
+  --green:#22B07D; --green-50:#E3F7EF; --yellow:#FFD45C; --yellow-50:#FFF6D9; --grey:#E8EEF4; --red:#E5484D;
+  --wa:#25D366; --wa-600:#1DA851; --tg:#2AABEE;
+  --bg:#F7FBFF; --card:#fff;
+  --radius:22px; --radius-sm:14px;
+  --shadow:0 10px 30px -12px rgba(16,76,140,.25);
+  --shadow-lg:0 24px 60px -20px rgba(16,76,140,.35);
+  --font-head:'Unbounded','Trebuchet MS','Segoe UI',sans-serif;
+  --font-body:'Manrope','Segoe UI',Roboto,Arial,sans-serif;
+  --header-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--font-head);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(28px,6.2vw,58px);font-weight:700}
+h2{font-size:clamp(24px,4.2vw,40px);font-weight:700}
+h3{font-size:clamp(17px,2.2vw,20px);font-weight:600}
+p{margin:0 0 1em}
+a{color:var(--sky-600)}
+button{font:inherit;color:inherit}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 16px}
+@media (min-width:768px){.container{padding:0 28px}}
+section{scroll-margin-top:calc(var(--header-h) + 8px)}
+.section{padding:72px 0}
+@media (max-width:600px){.section{padding:56px 0}}
+.section-head{max-width:720px;margin:0 auto 36px;text-align:center}
+.section-head p{color:var(--muted);font-size:17px;margin:0}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--sky-600);background:var(--sky-100);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
+.note{font-size:13.5px;color:var(--muted)}
+.note-center{text-align:center;margin-top:20px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:10px 26px;border-radius:999px;border:0;font:800 16px/1.2 var(--font-body);cursor:pointer;text-decoration:none;text-align:center;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-sun{background:linear-gradient(135deg,var(--gold),var(--sun) 55%,var(--sun-600));color:#fff;box-shadow:0 12px 24px -10px rgba(240,130,10,.7)}
+.btn-sky{background:var(--sky-500);color:#fff;box-shadow:0 12px 24px -12px rgba(30,144,224,.8)}
+.btn-sky:hover{background:var(--sky-600)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 24px -12px rgba(29,168,81,.8)}
+.btn-wa:hover{background:var(--wa-600)}
+.btn-tg{background:var(--tg);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.88);color:var(--sky-800);box-shadow:inset 0 0 0 2px #fff}
+.btn-outline{background:#fff;color:var(--sky-600);box-shadow:inset 0 0 0 2px var(--sky-200)}
+.btn-outline:hover{box-shadow:inset 0 0 0 2px var(--sky-400)}
+.btn-sm{min-height:44px;padding:8px 18px;font-size:15px}
+.btn-block{width:100%}
+
+/* Header */
+.header{position:fixed;inset:0 0 auto;z-index:50;height:var(--header-h);background:rgba(255,255,255,.84);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(220,235,248,.7);transition:box-shadow .2s}
+.header.scrolled{box-shadow:0 6px 24px -14px rgba(16,76,140,.4)}
+.header .container{height:100%;display:flex;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--font-head);font-weight:700;font-size:16px;line-height:1.05;flex:none}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--sky-400),var(--sky-600));display:grid;place-items:center;color:#fff;box-shadow:0 8px 18px -8px rgba(20,116,194,.8)}
+.logo-mark svg{width:26px;height:26px}
+.logo small{display:block;font-family:var(--font-body);font-weight:800;font-size:10.5px;letter-spacing:.2em;color:var(--sky-500);margin-top:3px}
+.nav{margin-left:auto}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+.nav a{display:block;padding:10px 12px;border-radius:999px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15px}
+.nav a:hover{background:var(--sky-100);color:var(--sky-600)}
+.nav .nav-mobile{display:none}
+.header-contacts{display:flex;align-items:center;gap:10px;flex:none}
+.header-phone{font-weight:800;text-decoration:none;color:var(--ink);white-space:nowrap}
+.header-wa{min-height:44px;padding:8px 16px}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:0;background:var(--sky-100);cursor:pointer;place-items:center;flex:none}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2.5px;border-radius:2px;background:var(--sky-800);position:relative;transition:transform .2s,background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:1100px){.header-phone{display:none}}
+@media (max-width:920px){
+  .burger{display:grid}
+  .header-contacts{margin-left:auto}
+  .nav{position:fixed;top:var(--header-h);left:0;right:0;background:#fff;padding:10px 16px 22px;box-shadow:0 20px 40px -20px rgba(16,76,140,.4);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s,transform .2s,visibility .2s;max-height:calc(100dvh - var(--header-h));overflow:auto}
+  .nav.open{opacity:1;visibility:visible;transform:none}
+  .nav ul{flex-direction:column}
+  .nav a{padding:14px 16px;font-size:17px;border-radius:14px}
+  .nav .nav-mobile{display:block}
+}
+@media (max-width:520px){
+  .header-wa span{display:none}
+  .header-wa{width:46px;padding:0;min-height:46px}
+  .logo{font-size:14px}
+}
+
+/* Hero */
+.hero{position:relative;padding:calc(var(--header-h) + 64px) 0 150px;background:linear-gradient(180deg,#6FBDF6 0%,#A3D8FF 40%,#DDF0FF 74%,var(--bg) 100%);overflow:hidden;isolation:isolate;text-align:center}
+.sky{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.sun-glow{position:absolute;top:9%;right:6%;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,#FFF0C2 0%,rgba(255,199,74,.6) 30%,rgba(255,199,74,0) 68%)}
+.cloud{position:absolute;left:0;color:#fff;animation:drift linear infinite}
+.cloud svg{width:100%;height:auto;filter:drop-shadow(0 10px 18px rgba(20,90,160,.12))}
+.cl1{top:14%;width:230px;animation-duration:80s;animation-delay:-10s;opacity:.95}
+.cl2{top:34%;width:150px;animation-duration:95s;animation-delay:-55s;opacity:.8}
+.cl3{top:62%;width:280px;animation-duration:110s;animation-delay:-30s;opacity:.9}
+.cl4{top:8%;width:120px;animation-duration:70s;animation-delay:-48s;opacity:.7}
+.cl5{top:50%;width:190px;animation-duration:88s;animation-delay:-75s;opacity:.85}
+@keyframes drift{from{transform:translateX(-320px)}to{transform:translateX(calc(100vw + 40px))}}
+.plane-fly{position:absolute;top:22%;left:0;width:240px;color:#fff;animation:fly 24s linear infinite}
+.plane-fly svg{width:100%;height:auto}
+@keyframes fly{0%{transform:translate(-260px,60px) rotate(-7deg)}100%{transform:translate(calc(100vw + 40px),-70px) rotate(-7deg)}}
+.hero-inner{position:relative;max-width:820px}
+.hero .eyebrow{background:rgba(255,255,255,.75);color:var(--sky-600)}
+.hero h1{color:var(--navy)}
+.hero h1 span{display:block;background:linear-gradient(90deg,var(--sky-600),#0E8ED8 40%,var(--sun-600));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-lead{font-size:clamp(17px,2.4vw,20px);color:#24476F;max-width:620px;margin:0 auto 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-stats{list-style:none;padding:0;margin:34px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero-stats li{background:rgba(255,255,255,.7);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14.5px;color:var(--sky-800)}
+.hero-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;color:var(--bg)}
+@media (max-width:600px){
+  .hero{padding:calc(var(--header-h) + 36px) 0 110px}
+  .hero-actions .btn{width:100%}
+  .plane-fly{width:170px;top:12%}
+  .sun-glow{width:160px;height:160px;right:-30px}
+}
+
+/* Picker */
+.picker{padding-top:10px}
+.picker-card{max-width:900px;margin:0 auto;background:#fff;border-radius:28px;box-shadow:var(--shadow-lg);padding:24px 18px 26px;position:relative}
+@media (min-width:768px){.picker-card{padding:38px 44px 40px}}
+.progress-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.progress-top strong{font-family:var(--font-head);font-size:18px;font-weight:600}
+.progress-top span{color:var(--muted);font-weight:700;font-size:14px}
+.progress-track{height:8px;border-radius:999px;background:var(--sky-100);overflow:hidden;margin-bottom:8px}
+.progress-fill{height:100%;width:33.33%;border-radius:inherit;background:linear-gradient(90deg,var(--sky-400),var(--sky-500) 60%,var(--sun));transition:width .35s ease}
+.progress-labels{display:flex;justify-content:space-between;list-style:none;margin:0 0 26px;padding:0;font-size:13px;font-weight:700;color:var(--muted)}
+.progress-labels li.done{color:var(--sky-600)}
+@media (max-width:520px){.progress-labels{display:none}.progress-track{margin-bottom:22px}}
+.step{display:none;border:0;padding:0;margin:0;min-width:0}
+.step.is-active{display:block;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.field{margin-bottom:24px}
+.field:last-child{margin-bottom:0}
+.field-label{display:block;font-weight:800;margin-bottom:10px;font-size:15.5px;padding:0}
+.field-hint{font-weight:600;color:var(--muted);font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;display:block}
+.chip input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer;z-index:1}
+.chip span{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:6px 16px;border-radius:14px;background:var(--sky-50);border:2px solid var(--line);font-weight:700;transition:background .15s,border-color .15s,color .15s,box-shadow .15s;text-align:center;line-height:1.2;height:100%}
+.chip:hover span{border-color:var(--sky-300)}
+.chip input:checked + span{background:var(--sky-500);border-color:var(--sky-500);color:#fff;box-shadow:0 10px 20px -12px rgba(30,144,224,.9)}
+.chip input:focus-visible + span{outline:3px solid var(--sun);outline-offset:2px}
+.chips-months{display:grid;grid-template-columns:repeat(3,1fr)}
+@media (min-width:560px){.chips-months{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:820px){.chips-months{grid-template-columns:repeat(6,1fr)}}
+.chips-months .chip span{padding:6px 4px}
+.chips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.chips-types{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (min-width:700px){.chips-types{grid-template-columns:repeat(4,1fr)}}
+.chips-types .chip span{flex-direction:column;min-height:104px;font-size:16px}
+.chips-types .chip i{font-style:normal;font-size:34px;line-height:1}
+.row-2{display:grid;gap:0 24px}
+@media (min-width:700px){.row-2{grid-template-columns:1fr 1fr}}
+.stepper{display:inline-flex;align-items:center;gap:6px;background:var(--sky-50);border:2px solid var(--line);border-radius:16px;padding:4px}
+.stepper button{width:44px;height:44px;border-radius:12px;border:0;background:#fff;font-size:22px;font-weight:800;color:var(--sky-600);cursor:pointer;box-shadow:0 4px 10px -6px rgba(16,76,140,.4)}
+.stepper button:disabled{opacity:.4;cursor:not-allowed}
+.stepper output{min-width:42px;text-align:center;font-weight:800;font-size:20px}
+.kids-box{background:var(--sky-50);border-radius:18px;padding:16px;margin-top:12px}
+.kids-box[hidden]{display:none}
+.kid-ages{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:14px}
+.kid-ages label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px}
+.form-error{color:var(--red);font-weight:700;font-size:14px;margin:10px 0 0}
+.form-error:empty{display:none}
+.step-actions{display:flex;gap:12px;justify-content:space-between;margin-top:30px;flex-wrap:wrap}
+.step-actions .btn{flex:1 1 160px}
+@media (min-width:600px){.step-actions .btn{flex:0 0 auto;min-width:180px}.step-actions .btn:only-child{margin-left:auto}}
+
+/* Results */
+.results{margin-top:44px}
+.results[hidden]{display:none}
+.results-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px;margin-bottom:20px}
+.results-head h3{font-size:clamp(20px,3vw,28px);margin:0 0 8px}
+.summary-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.summary-chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13.5px;font-weight:700;color:var(--sky-800)}
+.cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.ccard{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;animation:fadeUp .4s ease both}
+.ccard-top{position:relative;padding:58px 20px 18px;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.ccard-top::after{content:"";position:absolute;right:-40px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.14)}
+.ccard-ico{position:absolute;right:16px;top:12px;font-size:54px;line-height:1;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
+.ccard-rank{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.26);padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:800}
+.ccard-top h3{color:#fff;margin:0;font-size:22px;position:relative;z-index:1}
+.ccard-top p{margin:2px 0 0;opacity:.95;font-weight:700;position:relative;z-index:1}
+.ccard-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;font-size:13px;font-weight:800;line-height:1.2}
+.badge-best{background:var(--green-50);color:#0F7A54}
+.badge-good{background:var(--yellow-50);color:#8A5F00}
+.badge-kids{background:#F1EAFF;color:#6435C9}
+.badge-ok{background:var(--green-50);color:#0F7A54}
+.badge-over{background:#FFECEC;color:#B92F35}
+.badge-hot{background:var(--sun-50);color:#B85F00}
+.badge-example{background:var(--grey);color:var(--muted)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14.5px}
+.facts li{display:flex;gap:10px;align-items:flex-start}
+.facts li > span:first-child{width:22px;flex:none;text-align:center}
+.facts b{font-weight:800}
+.price{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
+.price small{display:block;color:var(--muted);font-weight:700;font-size:13px}
+.price strong{font-family:var(--font-head);font-size:24px;font-weight:600;color:var(--sky-800)}
+.empty{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:32px 22px;text-align:center}
+.empty .big{font-size:48px;line-height:1;margin-bottom:12px}
+
+/* Hot tours */
+.hot{background:linear-gradient(180deg,var(--bg),var(--sun-50) 30%,var(--sun-50) 70%,var(--bg))}
+.hot .eyebrow{background:#FFE7C2;color:#B85F00}
+.hcard{background:#fff;border-radius:var(--radius);box-shadow:0 14px 34px -16px rgba(240,130,10,.45);overflow:hidden;display:flex;flex-direction:column;border:2px solid #FFE3BA}
+.hcard-top{position:relative;padding:16px 18px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;min-height:118px;display:flex;flex-direction:column;justify-content:flex-end}
+.hcard-top .ccard-ico{font-size:44px}
+.hcard-top h3{color:#fff;margin:0;font-size:20px}
+.hcard-top p{margin:0;font-weight:700;opacity:.95}
+.countdown{position:absolute;left:14px;top:14px;background:linear-gradient(135deg,var(--gold),var(--sun-600));color:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:800;box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
+.hcard-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.hotel{font-weight:800;font-size:16px}
+.hmeta{color:var(--muted);font-size:14px;font-weight:600;margin:0}
+.hprice{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-top:auto;padding-top:6px}
+.hprice s{color:var(--muted);font-weight:700}
+.hprice strong{font-family:var(--font-head);font-size:24px;color:var(--sun-600);font-weight:700}
+.hprice .badge{margin-left:auto}
+
+/* Calendar */
+.cal-legend{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center;margin-bottom:18px;font-weight:700;font-size:14px}
+.cal-legend span{display:inline-flex;align-items:center;gap:8px}
+.cal-legend i{width:18px;height:18px;border-radius:6px;display:inline-block}
+.cal-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:8px;overscroll-behavior-x:contain}
+.cal{border-collapse:separate;border-spacing:4px;min-width:820px;width:100%}
+.cal thead th{font-size:12.5px;color:var(--muted);font-weight:800;padding:6px 2px;text-transform:uppercase;letter-spacing:.03em}
+.cal th[scope=row]{position:sticky;left:0;background:#fff;text-align:left;padding:0 10px 0 6px;color:var(--ink);font-size:14px;white-space:nowrap;z-index:1;font-weight:800}
+.cal td{padding:0}
+.cal td button{width:100%;height:40px;border:0;border-radius:10px;cursor:pointer;font-size:12.5px;font-weight:800;transition:transform .12s,box-shadow .12s}
+.cal td button:hover{transform:scale(1.08);box-shadow:0 6px 12px -6px rgba(0,0,0,.35)}
+.s2{background:var(--green);color:#fff}
+.s1{background:var(--yellow);color:#6B4A00}
+.s0{background:var(--grey);color:#9AA8B6}
+.cal-hint{display:none}
+@media (max-width:860px){.cal-hint{display:block;text-align:center;margin-top:10px}}
+
+/* Quiz */
+.quiz{background:linear-gradient(180deg,var(--bg),var(--sky-100))}
+.quiz-card{max-width:780px;margin:0 auto;background:#fff;border-radius:28px;box-shadow:var(--shadow-lg);padding:26px 18px;text-align:center}
+@media (min-width:768px){.quiz-card{padding:38px 44px}}
+.quiz-dots{display:flex;gap:6px;justify-content:center;margin-bottom:18px}
+.quiz-dots i{width:28px;height:6px;border-radius:999px;background:var(--sky-100)}
+.quiz-dots i.on{background:var(--sky-500)}
+.quiz-q{font-family:var(--font-head);font-size:clamp(19px,3vw,26px);font-weight:600;margin:0 0 22px}
+.quiz-opts{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:560px){.quiz-opts{grid-template-columns:1fr 1fr}}
+.quiz-opt{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 16px;min-height:68px;border-radius:18px;border:2px solid var(--line);background:var(--sky-50);font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s,transform .15s,background .15s}
+.quiz-opt:hover{border-color:var(--sky-400);transform:translateY(-2px);background:#fff}
+.quiz-opt i{font-style:normal;font-size:32px;line-height:1;flex:none}
+.quiz-result{border-radius:22px;padding:30px 20px;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));margin-bottom:18px}
+.quiz-result .big{font-size:64px;line-height:1;margin-bottom:10px}
+.quiz-result h3{color:#fff;font-size:clamp(22px,4vw,32px)}
+.quiz-result p{margin:0;font-weight:600;opacity:.95}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+
+/* Families */
+.family-grid{display:grid;gap:24px}
+@media (min-width:960px){.family-grid{grid-template-columns:1.45fr 1fr;align-items:start}}
+.fam-cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr))}
+.fcard{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:16px;display:flex;gap:14px;align-items:flex-start}
+.fcard-ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,var(--c1),var(--c2));flex:none}
+.fcard h3{font-size:16px;margin:0 0 4px}
+.fcard p{margin:0 0 8px;font-size:13.5px;color:var(--muted);font-weight:600}
+.link-btn{background:none;border:0;padding:4px 0;color:var(--sky-600);font-weight:800;cursor:pointer;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.docs{background:linear-gradient(160deg,#fff,var(--sky-50));border:2px solid var(--sky-100);border-radius:var(--radius);padding:24px 22px;box-shadow:var(--shadow)}
+.docs h3{display:flex;gap:10px;align-items:center}
+.docs ul{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:12px}
+.docs li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.docs li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.docs li.important{background:var(--sun-50);margin:0 -10px;padding:10px;border-radius:14px}
+.docs li.important::before{background:var(--sun)}
+
+/* Why / How */
+.why-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.why-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 22px}
+.why-ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:30px;background:var(--sky-100);margin-bottom:16px}
+.why-card p{color:var(--muted);margin:0;font-weight:500}
+.how{background:linear-gradient(180deg,var(--bg),var(--sky-100) 50%,var(--bg))}
+.how-steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:how}
+@media (min-width:900px){.how-steps{grid-template-columns:repeat(5,1fr);gap:16px}}
+.how-steps li{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:20px;position:relative;display:flex;gap:14px;align-items:flex-start}
+@media (min-width:900px){.how-steps li{flex-direction:column;text-align:left}}
+.how-num{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;background:linear-gradient(135deg,var(--sky-400),var(--sky-600));color:#fff;font-family:var(--font-head);font-weight:700;font-size:18px}
+.how-steps li:last-child .how-num{background:linear-gradient(135deg,var(--gold),var(--sun-600))}
+.how-steps h3{margin:0 0 4px;font-size:17px}
+.how-steps p{margin:0;color:var(--muted);font-size:14.5px;font-weight:500}
+
+/* Reviews */
+.rev-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.rcard{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.rphoto{height:170px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;font-size:72px;position:relative}
+.rphoto .badge{position:absolute;top:12px;right:12px}
+.rbody{padding:18px 20px 22px}
+.rhead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--sky-500);flex:none}
+.rhead b{display:block}
+.rhead span{color:var(--muted);font-size:14px;font-weight:600}
+.stars{color:var(--sun);letter-spacing:2px;margin-bottom:8px}
+.rbody p{margin:0;color:#2C4A6B}
+
+/* Subscribe */
+.subscribe-box{border-radius:30px;padding:40px 22px;text-align:center;color:#fff;background:linear-gradient(135deg,var(--sky-500),#3FA9F5 50%,#7CC8FF);position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+.subscribe-box::before,.subscribe-box::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.14)}
+.subscribe-box::before{width:260px;height:260px;left:-80px;bottom:-120px}
+.subscribe-box::after{width:200px;height:200px;right:-50px;top:-80px;background:rgba(255,199,74,.35)}
+.subscribe-box h2{color:#fff;position:relative}
+.subscribe-box p{position:relative;max-width:560px;margin:0 auto 24px;font-size:17px;opacity:.95}
+.subscribe-box .hero-actions{position:relative}
+
+/* Footer */
+.footer{background:var(--navy);color:#C9DCF0;padding:56px 0 30px;margin-top:72px}
+.footer a{color:#fff;text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer-grid{display:grid;gap:30px}
+@media (min-width:800px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.footer .logo{color:#fff;margin-bottom:14px}
+.footer h3{color:#fff;font-size:15px;font-family:var(--font-body);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:14px}
+.footer-bottom button,.footer .link-light{background:none;border:0;padding:0;color:#fff;cursor:pointer;font:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:40;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(29,168,81,.8);transition:transform .15s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float svg{width:34px;height:34px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid var(--wa);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+/* Dialogs */
+dialog{border:0;padding:0;border-radius:26px;width:calc(100vw - 24px);max-width:580px;max-height:calc(100dvh - 24px);overflow:auto;box-shadow:var(--shadow-lg);color:var(--ink);background:#fff}
+dialog::backdrop{background:rgba(10,42,76,.5);backdrop-filter:blur(3px)}
+dialog[open]{animation:fadeUp .25s ease}
+.dlg-inner{padding:26px 20px 24px}
+@media (min-width:600px){.dlg-inner{padding:34px 34px 30px}}
+.dlg-close{position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;border:0;background:var(--sky-50);font-size:24px;line-height:1;cursor:pointer;color:var(--sky-800)}
+.dlg-close:hover{background:var(--sky-100)}
+.dlg-title{padding-right:40px;font-size:clamp(20px,3.6vw,26px)}
+.summary{background:var(--sky-50);border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14.5px;margin:0 0 20px}
+.summary dt{color:var(--muted);font-weight:600}
+.summary dd{margin:0;font-weight:800;overflow-wrap:anywhere}
+.form-grid{display:grid;gap:14px}
+.form-field label{display:block;font-weight:800;font-size:14.5px;margin-bottom:6px}
+.form-field .req{color:var(--red)}
+.input{width:100%;min-height:50px;padding:12px 14px;border-radius:14px;border:2px solid var(--line);font:500 16px/1.3 var(--font-body);background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+.input:focus{border-color:var(--sky-400);outline:none;box-shadow:0 0 0 4px var(--sky-100)}
+.input[aria-invalid="true"]{border-color:var(--red)}
+select.input{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231474C2' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+textarea.input{min-height:90px;resize:vertical}
+.field-err{color:var(--red);font-size:13.5px;font-weight:700;margin-top:5px}
+.field-err:empty{display:none}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;font-weight:600;cursor:pointer}
+.check input{width:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--sky-500)}
+.thanks{text-align:center}
+.thanks .big{width:84px;height:84px;margin:6px auto 16px;border-radius:50%;background:var(--green-50);display:grid;place-items:center;font-size:44px}
+.thanks .btn{margin-top:8px}
+.policy h3{font-size:16px;margin:20px 0 6px;font-family:var(--font-body);font-weight:800}
+.policy p,.policy li{font-size:15px;color:#2C4A6B}
+.policy ul{padding-left:20px;margin:0 0 10px}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,30px);z-index:60;background:var(--navy);color:#fff;border-radius:18px;padding:12px 14px 12px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s;max-width:calc(100vw - 110px);font-weight:700;font-size:14.5px}
+.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.toast button{background:var(--sun);color:#fff;border:0;border-radius:999px;padding:8px 14px;font-weight:800;cursor:pointer}
+@media (max-width:600px){.toast{left:16px;right:90px;transform:translateY(30px);max-width:none}.toast.show{transform:none}}
+
+/* Admin */
+#admin{display:none;padding:calc(var(--header-h) + 30px) 0 60px}
+body.is-admin #admin{display:block}
+body.is-admin .site-only{display:none!important}
+.admin-head{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-bottom:18px}
+.admin-head h1{font-size:clamp(24px,4vw,34px);margin:0}
+.admin-actions{display:flex;flex-wrap:wrap;gap:10px}
+.admin-stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;padding:0;list-style:none}
+.admin-stats li{background:#fff;border-radius:14px;padding:10px 16px;box-shadow:var(--shadow);font-weight:700}
+.admin-stats b{font-family:var(--font-head);font-size:20px;margin-right:6px}
+.admin-warn{background:var(--sun-50);border:2px solid #FFE3BA;border-radius:16px;padding:14px 16px;margin-bottom:18px;font-size:14.5px}
+.table-wrap{overflow:auto;background:#fff;border-radius:18px;box-shadow:var(--shadow);max-height:70vh}
+.leads{border-collapse:collapse;width:100%;min-width:1500px;font-size:14px}
+.leads th,.leads td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.leads th{position:sticky;top:0;background:var(--sky-50);font-weight:800;white-space:nowrap;z-index:1}
+.leads td.nowrap{white-space:nowrap}
+.leads select{min-height:38px;padding:6px 30px 6px 10px;font-size:14px;border-radius:10px;font-weight:700}
+.st-new{background-color:#E3F2FF}.st-work{background-color:var(--yellow-50)}.st-sold{background-color:var(--green-50)}.st-fail{background-color:#FFECEC}
+.admin-empty{padding:40px 20px;text-align:center;color:var(--muted)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .plane-fly{left:58%;transform:rotate(-7deg)}
+  .cloud{transform:none}
+  .cl1{left:4%}.cl2{left:70%}.cl3{left:-4%}.cl4{left:40%}.cl5{left:80%}
+}
+</style>
+</head>
+<body>
+
+<!-- Иконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.7c0 2.4.7 4.7 1.9 6.6L3 29l6.9-1.8c1.8 1 3.9 1.5 6.1 1.5 7.2 0 13-5.7 13-12.7S23.2 3 16 3zm0 23.3c-2 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.2 10.2 0 0 1-1.7-5.6C5.2 9.9 10 5.3 16 5.3s10.8 4.6 10.8 10.4S22 26.3 16 26.3z"/><path fill="currentColor" d="M21.9 18.6c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.6 8.6 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4 2.4 3.6 5.8 5c2.1.9 3 .9 4 .8.7-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 32 32"><path fill="currentColor" d="M28 5 3.8 14.3c-1.6.6-1.6 1.5-.3 1.9l6.2 1.9 2.4 7.3c.3.8.5 1.1 1.1 1.1.5 0 .7-.2 1-.5l3-2.9 6.2 4.6c1.1.6 1.9.3 2.2-1.1L30 7c.4-1.7-.6-2.4-2-2zm-4.3 5.6-11 9.9-.4 4.2-1.9-6.1 13-8.3c.6-.4.9 0 .3.3z"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 40 32"><path fill="currentColor" d="M38 16c0 1.5-2 2.5-4 2.5H24L16 30h-4l4-11.5H8L5 23H2l2-7-2-7h3l3 4.5h8L12 2h4l8 11.5h10c2 0 4 1 4 2.5z"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 200 80"><path fill="currentColor" d="M40 72a25 25 0 0 1 5-50 35 35 0 0 1 65-8 28 28 0 0 1 50 18 22 22 0 0 1 0 40z"/></symbol>
+</svg>
+
+<a class="visually-hidden" href="#picker">Перейти к подбору тура</a>
+
+<header class="header" id="header">
+  <div class="container">
+    <a class="logo" href="#top" aria-label="Sky Travel Astana — на главную">
+      <span class="logo-mark"><svg><use href="#i-plane"/></svg></span>
+      <span>Sky Travel<small>ASTANA</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Главное меню">
+      <ul>
+        <li><a href="#picker">Подбор тура</a></li>
+        <li><a href="#hot">Горящие туры</a></li>
+        <li><a href="#calendar">Календарь</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+        <li class="nav-mobile"><a data-tel href="#"><span data-cfg="phone"></span></a></li>
+      </ul>
+    </nav>
+    <div class="header-contacts">
+      <a class="header-phone" data-tel href="#"><span data-cfg="phone"></span></a>
+      <a class="btn btn-wa header-wa" data-wa aria-label="Написать в WhatsApp"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+    </div>
+    <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main id="main" class="site-only">
+
+<!-- 4.2 Главный экран -->
+<section class="hero" id="top">
+  <div class="sky" aria-hidden="true">
+    <div class="sun-glow"></div>
+    <div class="cloud cl1"><svg><use href="#i-cloud"/></svg></div>
+    <div class="cloud cl2"><svg><use href="#i-cloud"/></svg></div>
+    <div class="cloud cl3"><svg><use href="#i-cloud"/></svg></div>
+    <div class="cloud cl4"><svg><use href="#i-cloud"/></svg></div>
+    <div class="cloud cl5"><svg><use href="#i-cloud"/></svg></div>
+    <div class="plane-fly">
+      <svg viewBox="0 0 240 40"><path d="M0 22 H180" stroke="#fff" stroke-width="3" stroke-dasharray="8 9" stroke-linecap="round" opacity=".8"/><use href="#i-plane" x="178" y="4" width="62" height="36"/></svg>
+    </div>
+  </div>
+  <div class="container hero-inner">
+    <span class="eyebrow">✈️ Туры из Астаны, Алматы и Шымкента</span>
+    <h1>Подберём отдых мечты <span>из Казахстана</span></h1>
+    <p class="hero-lead">Укажите месяц, бюджет и кто едет — за 1 минуту покажем страны, где в это время лучше всего, и примерную цену на всю семью.</p>
+    <div class="hero-actions">
+      <a class="btn btn-sun" href="#picker">Подобрать тур</a>
+      <a class="btn btn-ghost" data-wa><svg style="color:var(--wa)"><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+    </div>
+    <ul class="hero-stats">
+      <li>🌍 14 направлений</li>
+      <li>👨‍👩‍👧 Туры для семей</li>
+      <li>🛟 Поддержка 24/7</li>
+      <li>💳 Оплата частями</li>
+    </ul>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 50C240 100 480 0 720 34s480 66 720 6v60H0z"/></svg>
+</section>
+
+<!-- 4.3 Подбор тура -->
+<section class="picker" id="picker" aria-labelledby="picker-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Подбор за 1 минуту</span>
+      <h2 id="picker-title">Куда поехать в ваш отпуск?</h2>
+      <p>Три коротких шага — и вы увидите подходящие страны с погодой, визой и ценой на всех.</p>
+    </div>
+
+    <form class="picker-card" id="pickerForm" novalidate>
+      <div class="progress-top">
+        <strong id="stepTitle">Когда и откуда</strong>
+        <span id="stepCount">Шаг 1 из 3</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Прогресс подбора" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+      <ol class="progress-labels" id="progressLabels">
+        <li class="done">1. Когда и откуда</li>
+        <li>2. Кто едет и бюджет</li>
+        <li>3. Какой отдых</li>
+      </ol>
+
+      <!-- Шаг 1 -->
+      <fieldset class="step is-active" data-step="1">
+        <legend class="visually-hidden">Шаг 1. Когда и откуда</legend>
+        <div class="field" role="group" aria-labelledby="lbl-month">
+          <span class="field-label" id="lbl-month">Месяц отдыха</span>
+          <div class="chips chips-months" id="monthChips"></div>
+        </div>
+        <div class="row-2">
+          <div class="field" role="group" aria-labelledby="lbl-city">
+            <span class="field-label" id="lbl-city">Город вылета</span>
+            <div class="chips" id="cityChips"></div>
+          </div>
+          <div class="field" role="group" aria-labelledby="lbl-nights">
+            <span class="field-label" id="lbl-nights">Количество ночей</span>
+            <div class="chips" id="nightsChips"></div>
+          </div>
+        </div>
+        <p class="form-error" id="err1" role="alert"></p>
+        <div class="step-actions">
+          <button type="button" class="btn btn-sky" data-next>Далее →</button>
+        </div>
+      </fieldset>
+
+      <!-- Шаг 2 -->
+      <fieldset class="step" data-step="2">
+        <legend class="visually-hidden">Шаг 2. Кто едет и бюджет</legend>
+        <div class="row-2">
+          <div class="field">
+            <span class="field-label" id="lbl-adults">Взрослые</span>
+            <div class="stepper" role="group" aria-labelledby="lbl-adults">
+              <button type="button" id="adultsMinus" aria-label="Меньше взрослых">−</button>
+              <output id="adultsOut" aria-live="polite">2</output>
+              <button type="button" id="adultsPlus" aria-label="Больше взрослых">+</button>
+            </div>
+          </div>
+          <div class="field" role="group" aria-labelledby="lbl-kids">
+            <span class="field-label" id="lbl-kids">Дети</span>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="hasKids" value="no" checked><span>Без детей</span></label>
+              <label class="chip"><input type="radio" name="hasKids" value="yes"><span>👧 С детьми</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="kids-box field" id="kidsBox" hidden>
+          <span class="field-label" id="lbl-kidscount">Сколько детей <span class="field-hint">(возраст на момент поездки)</span></span>
+          <div class="stepper" role="group" aria-labelledby="lbl-kidscount">
+            <button type="button" id="kidsMinus" aria-label="Меньше детей">−</button>
+            <output id="kidsOut" aria-live="polite">1</output>
+            <button type="button" id="kidsPlus" aria-label="Больше детей">+</button>
+          </div>
+          <div class="kid-ages" id="kidAges"></div>
+        </div>
+        <div class="field" role="group" aria-labelledby="lbl-budget">
+          <span class="field-label" id="lbl-budget">Бюджет на всю поездку</span>
+          <div class="chips chips-grid" id="budgetChips"></div>
+        </div>
+        <p class="form-error" id="err2" role="alert"></p>
+        <div class="step-actions">
+          <button type="button" class="btn btn-outline" data-prev>← Назад</button>
+          <button type="button" class="btn btn-sky" data-next>Далее →</button>
+        </div>
+      </fieldset>
+
+      <!-- Шаг 3 -->
+      <fieldset class="step" data-step="3">
+        <legend class="visually-hidden">Шаг 3. Какой отдых</legend>
+        <div class="field" role="group" aria-labelledby="lbl-types">
+          <span class="field-label" id="lbl-types">Какой отдых хочется? <span class="field-hint">можно выбрать несколько</span></span>
+          <div class="chips chips-types" id="typeChips"></div>
+        </div>
+        <p class="form-error" id="err3" role="alert"></p>
+        <div class="step-actions">
+          <button type="button" class="btn btn-outline" data-prev>← Назад</button>
+          <button type="submit" class="btn btn-sun">Показать страны ✈️</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="results" id="results" hidden aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 4.5 Горящие туры -->
+<section class="section hot" id="hot" aria-labelledby="hot-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔥 Успейте забронировать</span>
+      <h2 id="hot-title">Горящие туры</h2>
+      <p>Скидки на ближайшие вылеты. Места разбирают быстро — бронируйте сейчас.</p>
+    </div>
+    <div class="cards" id="hotCards"></div>
+    <p class="note note-center">Цены ориентировочные, за весь тур на указанное количество человек. Правила и цены могут меняться — уточняйте у менеджера.</p>
+  </div>
+</section>
+
+<!-- 4.6 Календарь сезонов -->
+<section class="section" id="calendar" aria-labelledby="cal-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">📅 Когда куда ехать</span>
+      <h2 id="cal-title">Календарь сезонов</h2>
+      <p>Нажмите на клетку — месяц подставится в подбор тура.</p>
+    </div>
+    <div class="cal-legend">
+      <span><i class="s2"></i>Лучший сезон</span>
+      <span><i class="s1"></i>Можно ехать</span>
+      <span><i class="s0"></i>Не сезон</span>
+      <span>Цифра — температура воздуха, °C</span>
+    </div>
+    <div class="cal-wrap" tabindex="0" aria-label="Таблица сезонов, прокручивается по горизонтали">
+      <table class="cal" id="calTable"></table>
+    </div>
+    <p class="note cal-hint">← Листайте таблицу в сторону →</p>
+  </div>
+</section>
+
+<!-- 4.7 Тест -->
+<section class="section quiz" id="quiz" aria-labelledby="quiz-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🎯 Тест на 30 секунд</span>
+      <h2 id="quiz-title">Какой отдых вам подходит?</h2>
+      <p>Пять весёлых вопросов — и мы назовём страну вашей мечты.</p>
+    </div>
+    <div class="quiz-card" id="quizCard" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 4.8 Семьям с детьми -->
+<section class="section" id="family" aria-labelledby="fam-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">👨‍👩‍👧‍👦 Отдых без стресса</span>
+      <h2 id="fam-title">Семьям с детьми</h2>
+      <p>Короткий перелёт, детские отели с аниматорами и спокойное море — направления, которые мы советуем семьям.</p>
+    </div>
+    <div class="family-grid">
+      <div class="fam-cards" id="famCards"></div>
+      <aside class="docs" aria-labelledby="docs-title">
+        <h3 id="docs-title">📋 Документы на ребёнка</h3>
+        <ul>
+          <li>Паспорт ребёнка (проверьте срок действия)</li>
+          <li class="important">Нотариальное согласие второго родителя, если ребёнок летит с одним из родителей</li>
+          <li>Свидетельство о рождении (копия)</li>
+          <li>Медицинская страховка на весь срок поездки</li>
+        </ul>
+        <p class="note">Требования отдельных стран могут отличаться — менеджер проверит пакет документов перед вылетом.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 4.9 Почему мы -->
+<section class="section" id="why" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">💙 Sky Travel Astana</span>
+      <h2 id="why-title">Почему нам доверяют</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why-card"><div class="why-ico">🧭</div><h3>Знаем направления</h3><p>Опыт и личное знание стран: подскажем отель, пляж и лучший сезон под ваш запрос.</p></article>
+      <article class="why-card"><div class="why-ico">🤝</div><h3>Надёжные туроператоры</h3><p>Работаем с проверенными партнёрами: <span data-cfg="partners"></span>.</p></article>
+      <article class="why-card"><div class="why-ico">🛟</div><h3>Поддержка 24/7</h3><p>На связи всё время поездки — поможем, если задержали рейс или что-то пошло не так.</p></article>
+      <article class="why-card"><div class="why-ico">💳</div><h3>Оплата частями</h3><p>Рассрочка и оплата частями: <span data-cfg="installments"></span>.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 4.10 Как мы работаем -->
+<section class="section how" id="how" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">⚙️ Просто и прозрачно</span>
+      <h2 id="how-title">Как мы работаем</h2>
+    </div>
+    <ol class="how-steps">
+      <li><span class="how-num">1</span><div><h3>Заявка</h3><p>Оставьте заявку на сайте или напишите в WhatsApp.</p></div></li>
+      <li><span class="how-num">2</span><div><h3>Подбор</h3><p>Пришлём 3–5 вариантов под ваши даты и бюджет.</p></div></li>
+      <li><span class="how-num">3</span><div><h3>Договор</h3><p>Заключаем официальный договор — всё прозрачно.</p></div></li>
+      <li><span class="how-num">4</span><div><h3>Оплата</h3><p>Удобная оплата, в том числе частями.</p></div></li>
+      <li><span class="how-num">5</span><div><h3>Вылет</h3><p>Отдаём документы и остаёмся на связи 24/7.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4.11 Отзывы -->
+<section class="section" id="reviews" aria-labelledby="rev-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">⭐ Отзывы</span>
+      <h2 id="rev-title">Нам пишут туристы</h2>
+      <p>Отзывы и фотографии публикуются только с согласия туристов.</p>
+    </div>
+    <div class="rev-grid" id="revCards"></div>
+  </div>
+</section>
+
+<!-- 4.12 Подписка -->
+<section class="section" id="subscribe" aria-labelledby="sub-title">
+  <div class="container">
+    <div class="subscribe-box">
+      <h2 id="sub-title">Получайте горящие туры первыми</h2>
+      <p>Лучшие предложения уходят за несколько часов. Подпишитесь — и мы пришлём их раньше всех.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" data-wa="Здравствуйте! Хочу получать горящие туры первыми."><svg><use href="#i-wa"/></svg>Подписаться в WhatsApp</a>
+        <a class="btn btn-tg" data-tg><svg><use href="#i-tg"/></svg>Подписаться в Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 5. Страница для владельца -->
+<section id="admin" aria-labelledby="admin-title">
+  <div class="container">
+    <div class="admin-head">
+      <h1 id="admin-title">Заявки</h1>
+      <div class="admin-actions">
+        <button class="btn btn-sky btn-sm" type="button" id="csvBtn">⬇ Выгрузить в CSV (Excel)</button>
+        <a class="btn btn-outline btn-sm" href="#top">← На сайт</a>
+      </div>
+    </div>
+    <div class="admin-warn"><b>Важно:</b> в этой версии сайта заявки хранятся только в браузере того устройства, где их оставили. Основной канал приёма заявок — WhatsApp. Для сбора заявок со всех устройств подключите Google Таблицу, Telegram-бота или CRM.</div>
+    <ul class="admin-stats" id="adminStats"></ul>
+    <div class="table-wrap" id="adminTable"></div>
+  </div>
+</section>
+
+<!-- 4.13 Подвал -->
+<footer class="footer site-only" id="contacts">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#top"><span class="logo-mark"><svg><use href="#i-plane"/></svg></span><span>Sky Travel<small>ASTANA</small></span></a>
+        <p>Турагентство в Астане. Подбираем пляжный, семейный и экскурсионный отдых из Казахстана.</p>
+        <p class="note" style="color:#9DB8D6">Цены и визовые правила на сайте ориентировочные. Правила и цены могут меняться — уточняйте у менеджера.</p>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul>
+          <li>📍 <span data-cfg="address"></span></li>
+          <li>📞 <a data-tel href="#"><span data-cfg="phone"></span></a></li>
+          <li>💬 <a data-wa>WhatsApp</a> · <a data-tg>Telegram</a></li>
+          <li>✉️ <a data-mail href="#"><span data-cfg="email"></span></a></li>
+          <li>📷 <a data-ig>Instagram @<span data-cfg="instagram"></span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Информация</h3>
+        <ul>
+          <li>Лицензия турагентства: <span data-cfg="license"></span></li>
+          <li><button class="link-light" type="button" data-privacy>Политика конфиденциальности</button></li>
+          <li><a href="#admin">Вход для менеджера</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> <span data-cfg="name"></span></span>
+      <button type="button" data-privacy>Политика конфиденциальности</button>
+    </div>
+  </div>
+</footer>
+
+<!-- 4.14 Плавающая кнопка WhatsApp -->
+<a class="wa-float site-only" data-wa aria-label="Написать в WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<!-- 4.4 Окно заявки -->
+<dialog id="leadDialog" aria-labelledby="leadTitle">
+  <button class="dlg-close" type="button" data-close aria-label="Закрыть">×</button>
+  <div class="dlg-inner">
+    <div id="leadFormView">
+      <h2 class="dlg-title" id="leadTitle">Заявка на тур</h2>
+      <dl class="summary" id="leadSummary"></dl>
+      <form id="leadForm" class="form-grid" novalidate>
+        <div class="form-field">
+          <label for="fName">Имя <span class="req">*</span></label>
+          <input class="input" id="fName" name="name" autocomplete="name" required aria-describedby="eName">
+          <div class="field-err" id="eName"></div>
+        </div>
+        <div class="form-field">
+          <label for="fPhone">Телефон <span class="req">*</span></label>
+          <input class="input" id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required aria-describedby="ePhone">
+          <div class="field-err" id="ePhone"></div>
+        </div>
+        <div class="form-field">
+          <label for="fEmail">Email</label>
+          <input class="input" id="fEmail" name="email" type="email" autocomplete="email" aria-describedby="eEmail">
+          <div class="field-err" id="eEmail"></div>
+        </div>
+        <div class="form-field">
+          <label for="fComment">Комментарий</label>
+          <textarea class="input" id="fComment" name="comment" placeholder="Пожелания по отелю, датам, питанию…"></textarea>
+        </div>
+        <div class="form-field">
+          <label class="check"><input type="checkbox" id="fConsent" aria-describedby="eConsent"> <span>Я согласен(на) на обработку персональных данных в соответствии с <a href="#" data-privacy>политикой конфиденциальности</a> <span class="req">*</span></span></label>
+          <div class="field-err" id="eConsent"></div>
+        </div>
+        <button class="btn btn-sun btn-block" type="submit">Отправить заявку</button>
+        <p class="note" style="margin:0">Цены ориентировочные. Точную стоимость назовёт менеджер.</p>
+      </form>
+    </div>
+    <div class="thanks" id="leadThanks" hidden>
+      <div class="big">🎉</div>
+      <h2 class="dlg-title" style="padding:0">Спасибо!</h2>
+      <p>Менеджер свяжется с вами в течение 30 минут.</p>
+      <p class="note">Чтобы получить ответ быстрее, отправьте заявку нам в WhatsApp — текст уже готов.</p>
+      <a class="btn btn-wa btn-block" id="thanksWa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Отправить в WhatsApp</a>
+      <button class="btn btn-outline btn-block" type="button" data-close style="margin-top:10px">Закрыть</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Политика конфиденциальности -->
+<dialog id="privacyDialog" aria-labelledby="privacyTitle">
+  <button class="dlg-close" type="button" data-close aria-label="Закрыть">×</button>
+  <div class="dlg-inner policy">
+    <h2 class="dlg-title" id="privacyTitle">Политика конфиденциальности</h2>
+    <p>Настоящая политика описывает, как <b data-cfg="name"></b> обрабатывает персональные данные посетителей сайта в соответствии с Законом Республики Казахстан «О персональных данных и их защите».</p>
+    <h3>Какие данные мы собираем</h3>
+    <ul>
+      <li>имя, номер телефона, email (по желанию);</li>
+      <li>параметры поездки: страна, месяц, город вылета, количество ночей, состав туристов, возраст детей, бюджет, тип отдыха;</li>
+      <li>комментарий к заявке.</li>
+    </ul>
+    <h3>Для чего</h3>
+    <p>Только для подбора тура, связи с вами по заявке и оформления поездки. Мы не передаём данные третьим лицам, кроме туроператоров и перевозчиков, когда это нужно для бронирования.</p>
+    <h3>Кто имеет доступ</h3>
+    <p>Сотрудники агентства, которые работают с вашей заявкой.</p>
+    <h3>Срок хранения</h3>
+    <p>Данные хранятся до достижения целей обработки, но не дольше 1 года после последнего обращения, если иное не требуется законом.</p>
+    <h3>Как отозвать согласие</h3>
+    <p>Напишите нам на <a data-mail href="#"><span data-cfg="email"></span></a> или в <a data-wa>WhatsApp</a> — мы удалим ваши данные и сообщим об этом.</p>
+    <h3>Отзывы и фото</h3>
+    <p>Отзывы и фотографии туристов публикуются на сайте только с их согласия.</p>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastText"></span></div>
+
+<script>
+/* =====================================================================
+   НАСТРОЙКИ АГЕНТСТВА — замените значения на реальные (раздел 12 PRD)
+   ===================================================================== */
+const CONFIG = {
+  name: 'Sky Travel Astana',
+  phone: '+7 (700) 000-00-00',          // TODO: реальный телефон
+  phoneRaw: '+77000000000',             // тот же номер без пробелов — для звонка
+  whatsapp: '77000000000',              // TODO: номер WhatsApp, только цифры, с 7
+  telegram: 'skytravelastana',          // TODO: имя канала/аккаунта Telegram без @
+  instagram: 'skytravel.astana',        // TODO: Instagram без @
+  email: 'info@skytravel.kz',           // TODO
+  address: 'г. Астана, адрес офиса уточняется', // TODO
+  license: '№ — (уточняется)',          // TODO: номер лицензии турагентства
+  partners: 'Anex Tour, Pegas Touristik, Coral Travel и другие', // TODO: уточнить
+  installments: 'Kaspi (условия уточняйте у менеджера)'          // TODO: уточнить
+};
+
+/* =====================================================================
+   НАПРАВЛЕНИЯ (раздел 7 PRD). Цена — за 1 взрослого, 7 ночей, перелёт + отель.
+   season: 0 — не сезон, 1 — можно ехать, 2 — лучший сезон (янв → дек)
+   types: beach — пляж, tour — экскурсии, mount — горы, shop — шопинг
+   Все цены, визы и время перелёта ориентировочные — проверьте перед запуском.
+   ===================================================================== */
+const COUNTRIES = [
+  { id:'turkey', name:'Турция', resort:'Анталья', to:'в Турцию', types:['beach','tour','shop'], kids:true,
+    visa:'Без визы', flight:'~5,5 ч', flightH:5.5, price:350000,
+    season:[0,0,0,1,2,2,2,2,2,2,0,0], air:[15,16,19,22,27,32,35,35,31,26,20,16], sea:[17,16,17,18,22,25,28,29,27,24,21,18],
+    color:['#FF7A59','#FFB347'], icon:'🏖️', note:'«Всё включено», аквапарки и тёплое море — классика для семей.' },
+  { id:'egypt', name:'Египет', resort:'Шарм-эль-Шейх', to:'в Египет', types:['beach'], kids:true,
+    visa:'Виза по прилёту', flight:'~6,5 ч', flightH:6.5, price:320000,
+    season:[1,1,2,2,2,1,1,1,2,2,2,1], air:[22,23,25,29,33,35,36,36,34,31,27,23], sea:[22,21,22,24,25,27,28,28,28,27,25,23],
+    color:['#E39B2E','#F6D365'], icon:'🐪', note:'Коралловые рифы, снорклинг и тепло почти круглый год.' },
+  { id:'uae', name:'ОАЭ', resort:'Дубай', to:'в ОАЭ', types:['beach','shop','tour'], kids:true,
+    visa:'Уточняйте у менеджера', flight:'~4,5 ч', flightH:4.5, price:380000,
+    season:[2,2,2,2,1,0,0,0,1,2,2,2], air:[24,25,28,33,38,40,42,42,39,35,30,26], sea:[22,22,24,26,29,31,33,33,32,30,27,24],
+    color:['#3A7BD5','#00C6FF'], icon:'🏙️', note:'Небоскрёбы, шопинг и пляжи — зимнее солнце в 4,5 часах полёта.' },
+  { id:'thailand', name:'Таиланд', resort:'Пхукет', to:'в Таиланд', types:['beach','tour'], kids:true,
+    visa:'Без визы (срок уточняйте)', flight:'~7,5 ч', flightH:7.5, price:520000,
+    season:[2,2,2,1,0,0,0,0,0,1,2,2], air:[32,33,34,34,33,32,31,31,31,31,31,31], sea:[28,28,29,30,29,29,28,28,28,28,28,28],
+    color:['#11998E','#38EF7D'], icon:'🐘', note:'Экзотика, острова и уличная еда — идеальная зима в тропиках.' },
+  { id:'vietnam', name:'Вьетнам', resort:'Нячанг', to:'во Вьетнам', types:['beach','tour'], kids:true,
+    visa:'Уточняйте у менеджера', flight:'~7 ч', flightH:7, price:480000,
+    season:[1,2,2,2,2,2,2,2,1,0,0,1], air:[27,28,29,31,32,33,33,33,32,30,28,27], sea:[24,24,26,27,28,29,28,28,28,27,26,25],
+    color:['#E53935','#FF8A65'], icon:'🛶', note:'Длинные пляжи, морепродукты и доступные цены.' },
+  { id:'hainan', name:'Китай', resort:'Хайнань, Санья', to:'на Хайнань', types:['beach','shop'], kids:true,
+    visa:'Без визы до 30 дней', flight:'~6,5 ч', flightH:6.5, price:420000,
+    season:[2,2,2,2,1,1,1,1,0,1,2,2], air:[26,27,29,31,32,33,33,32,31,30,28,26], sea:[23,23,25,27,29,29,29,29,28,27,26,24],
+    color:['#00B4DB','#0083B0'], icon:'🌴', note:'«Китайские Гавайи»: новые отели, спокойное море и шопинг.' },
+  { id:'maldives', name:'Мальдивы', resort:'атоллы', to:'на Мальдивы', plural:true, types:['beach'], kids:false,
+    visa:'Бесплатно по прилёту', flight:'~7 ч+ с пересадкой', flightH:8, price:1100000,
+    season:[2,2,2,2,1,1,1,1,1,1,1,2], air:Array(12).fill(30), sea:Array(12).fill(29),
+    color:['#00C9FF','#5EE7B0'], icon:'🐠', note:'Бунгало над водой и бирюзовые лагуны — самый романтичный отдых.' },
+  { id:'srilanka', name:'Шри-Ланка', resort:'юго-запад', to:'на Шри-Ланку', types:['beach','tour'], kids:false,
+    visa:'Электронное разрешение (ETA)', flight:'~7 ч', flightH:7, price:550000,
+    season:[2,2,2,1,0,0,0,0,0,0,1,2], air:Array(12).fill(31), sea:Array(12).fill(28),
+    color:['#2E8B57','#A8E063'], icon:'🍵', note:'Чайные плантации, слоны, храмы и океан.' },
+  { id:'georgia', name:'Грузия', resort:'Батуми / Тбилиси', to:'в Грузию', types:['beach','tour','mount'], kids:true,
+    visa:'Без визы', flight:'~3,5 ч', flightH:3.5, price:250000,
+    season:[1,1,0,1,1,2,2,2,2,1,0,1], air:[8,9,12,16,21,25,28,28,25,20,14,10], sea:[11,10,11,13,18,23,26,26,24,20,16,13],
+    color:['#8E2DE2','#C471ED'], icon:'🍇', note:'Горы, море, хинкали и гостеприимство. Зимой — горные лыжи в Гудаури.' },
+  { id:'bali', name:'Индонезия', resort:'Бали', to:'на Бали', types:['beach','tour'], kids:false,
+    visa:'Уточняйте у менеджера', flight:'~10 ч с пересадкой', flightH:10, price:650000,
+    season:[0,0,1,2,2,2,2,2,2,1,0,0], air:Array(12).fill(31), sea:Array(12).fill(28),
+    color:['#F953C6','#FF9A8B'], icon:'🌺', note:'Рисовые террасы, сёрфинг, йога и закаты над океаном.' },
+  { id:'malaysia', name:'Малайзия', resort:'Лангкави', to:'в Малайзию', types:['beach','shop'], kids:true,
+    visa:'Без визы (уточняйте)', flight:'~8 ч', flightH:8, price:500000,
+    season:[2,2,2,1,1,1,1,1,0,0,1,2], air:Array(12).fill(32), sea:Array(12).fill(29),
+    color:['#4568DC','#B06AB3'], icon:'🏝️', note:'Тропические острова, мангровые леса и беспошлинный шопинг.' },
+  { id:'montenegro', name:'Черногория', resort:'Будва', to:'в Черногорию', types:['beach','tour','mount'], kids:true,
+    visa:'Без визы (уточняйте)', flight:'~6 ч с пересадкой', flightH:6, price:450000,
+    season:[0,0,0,0,1,2,2,2,2,1,0,0], air:[12,13,15,18,23,27,30,30,26,21,16,13], sea:[14,13,14,16,19,23,25,26,24,21,18,15],
+    color:['#1D4E89','#4FB0F2'], icon:'⛵', note:'Адриатика, старинные городки и горы прямо у моря.' },
+  { id:'issykkul', name:'Кыргызстан', resort:'Иссык-Куль', to:'на Иссык-Куль', types:['beach','mount'], kids:true,
+    visa:'Без визы, по удостоверению', flight:'~1,5 ч + дорога', flightH:1.5, price:120000,
+    season:[0,0,0,0,0,1,2,2,1,0,0,0], air:[-3,-1,6,14,19,23,26,26,20,13,5,0], sea:[3,3,4,8,13,17,20,21,18,13,8,5],
+    color:['#43C6AC','#2C7BC0'], icon:'🏔️', note:'Горное озеро, чистый воздух и отдых совсем рядом.' },
+  { id:'uzbekistan', name:'Узбекистан', resort:'Самарканд', to:'в Узбекистан', types:['tour'], kids:true,
+    visa:'Без визы', flight:'~2 ч', flightH:2, price:200000,
+    season:[0,0,1,2,2,1,0,0,2,2,1,0], air:[6,8,15,21,27,32,34,33,28,21,14,8], sea:null,
+    color:['#1E88C7','#6DD5ED'], icon:'🕌', note:'Голубые купола, Великий шёлковый путь и лучший плов.' }
+];
+
+/* =====================================================================
+   ГОРЯЩИЕ ТУРЫ — редактируйте этот список (date — дата вылета ГГГГ-ММ-ДД).
+   Прошедшие вылеты скрываются автоматически.
+   ===================================================================== */
+const HOT_TOURS = [
+  { country:'turkey', resort:'Аланья', hotel:'Sea Breeze Resort 5★', date:'2026-10-08', nights:7, from:'Астана', pax:'за 2 взрослых', oldPrice:780000, price:615000 },
+  { country:'egypt', resort:'Шарм-эль-Шейх', hotel:'Coral Bay Hotel 4★', date:'2026-10-12', nights:9, from:'Алматы', pax:'за 2 взрослых', oldPrice:720000, price:569000 },
+  { country:'uae', resort:'Дубай', hotel:'Marina View Hotel 4★', date:'2026-10-17', nights:6, from:'Астана', pax:'за 2 взр. + 1 ребёнка', oldPrice:1150000, price:925000 },
+  { country:'vietnam', resort:'Нячанг', hotel:'Ocean Pearl 4★', date:'2026-10-24', nights:10, from:'Алматы', pax:'за 2 взрослых', oldPrice:1290000, price:1049000 }
+];
+
+/* =====================================================================
+   ОТЗЫВЫ — пока примеры (example:true). Замените на реальные отзывы
+   туристов только с их согласия на публикацию.
+   ===================================================================== */
+const REVIEWS = [
+  { name:'Айгерим', country:'Турция, Белек', text:'Летали всей семьёй с двумя детьми. Отель подобрали идеально: мелкое море, детский клуб, аквапарк. Менеджер была на связи даже ночью, когда задержали рейс.', icon:'🏖️', color:['#FF7A59','#FFB347'], example:true },
+  { name:'Данияр и Алия', country:'Мальдивы', text:'Медовый месяц мечты! Помогли с пересадкой и выбрали виллу над водой в рамках бюджета. Спасибо за рассрочку — это очень выручило.', icon:'🐠', color:['#00C9FF','#5EE7B0'], example:true },
+  { name:'Марина', country:'Грузия, Тбилиси', text:'Поехали с подругами на выходные. Всё чётко: билеты, трансфер, отель в центре. Уже выбираем следующую поездку через Sky Travel.', icon:'🍇', color:['#8E2DE2','#C471ED'], example:true }
+];
+
+/* ===================== Справочники подбора ===================== */
+const MONTHS = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+const MONTHS_IN = ['январе','феврале','марте','апреле','мае','июне','июле','августе','сентябре','октябре','ноябре','декабре'];
+const MONTHS_SHORT = ['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек'];
+const CITIES = ['Астана','Алматы','Шымкент','Другой'];
+const NIGHTS = [{ label:'5–7', k:1.0 }, { label:'8–10', k:1.3 }, { label:'11–14', k:1.7 }];
+const BUDGETS = [
+  { label:'до 500 000 ₸', max:500000 },
+  { label:'500 000 – 1 000 000 ₸', max:1000000 },
+  { label:'1 000 000 – 2 000 000 ₸', max:2000000 },
+  { label:'2 000 000 – 3 500 000 ₸', max:3500000 },
+  { label:'более 3 500 000 ₸', max:Infinity }
+];
+const TYPES = [
+  { v:'beach', label:'Пляж', icon:'🏖️' },
+  { v:'tour', label:'Экскурсии', icon:'🏛️' },
+  { v:'mount', label:'Горы', icon:'🏔️' },
+  { v:'shop', label:'Шопинг', icon:'🛍️' }
+];
+const STATUSES = [
+  { v:'Новая', cls:'st-new' }, { v:'В работе', cls:'st-work' }, { v:'Продано', cls:'st-sold' }, { v:'Отказ', cls:'st-fail' }
+];
+const DISCLAIMER = 'Правила и цены могут меняться — уточняйте у менеджера.';
+
+/* ===================== Тест ===================== */
+const QUIZ = [
+  { q:'Идеальное утро в отпуске — это…', a:[
+    { t:'Шезлонг и шум моря', i:'🏖️', p:{ turkey:2, egypt:2, maldives:3, hainan:2, vietnam:1, malaysia:1 } },
+    { t:'Прогулка по старому городу', i:'🗺️', p:{ uzbekistan:3, georgia:2, montenegro:2, turkey:1 } },
+    { t:'Рассвет в горах', i:'🏔️', p:{ issykkul:3, georgia:2, montenegro:2, srilanka:1 } },
+    { t:'Кофе и шопинг', i:'🛍️', p:{ uae:3, hainan:2, malaysia:2, turkey:1 } } ] },
+  { q:'Сколько готовы лететь?', a:[
+    { t:'До 4 часов, не больше', i:'⏱️', p:{ georgia:3, uzbekistan:3, issykkul:3, uae:2 } },
+    { t:'5–7 часов — нормально', i:'✈️', p:{ turkey:2, egypt:2, hainan:2, vietnam:2, srilanka:1, montenegro:1 } },
+    { t:'Хоть на край света!', i:'🌏', p:{ maldives:2, bali:3, thailand:2, malaysia:2 } } ] },
+  { q:'С кем едете?', a:[
+    { t:'Семьёй с детьми', i:'👨‍👩‍👧', p:{ turkey:3, egypt:2, uae:2, hainan:2, issykkul:1 } },
+    { t:'Вдвоём, романтика', i:'💞', p:{ maldives:3, bali:2, srilanka:2, montenegro:1 } },
+    { t:'С друзьями', i:'🎉', p:{ thailand:3, vietnam:2, georgia:2, bali:1 } },
+    { t:'Один, за впечатлениями', i:'🎒', p:{ uzbekistan:2, georgia:2, thailand:1, srilanka:2 } } ] },
+  { q:'Что будет в тарелке?', a:[
+    { t:'Экзотика и острые супы', i:'🍜', p:{ thailand:3, vietnam:3, srilanka:2, malaysia:2, bali:1 } },
+    { t:'Хинкали и плов', i:'🥟', p:{ georgia:3, uzbekistan:3, issykkul:2 } },
+    { t:'«Всё включено», и точка', i:'🍹', p:{ turkey:3, egypt:3 } },
+    { t:'Свежие морепродукты', i:'🦞', p:{ montenegro:2, maldives:2, hainan:2, uae:1, vietnam:1 } } ] },
+  { q:'Ваш бюджет на настроение?', a:[
+    { t:'Экономно, но с удовольствием', i:'🪙', p:{ issykkul:3, uzbekistan:2, georgia:2, egypt:2 } },
+    { t:'Золотая середина', i:'💼', p:{ turkey:2, vietnam:2, hainan:2, montenegro:2, uae:1 } },
+    { t:'Живём один раз!', i:'💎', p:{ maldives:3, bali:2, srilanka:2, thailand:1 } } ] }
+];
+
+/* ===================== Утилиты ===================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const byId = id => COUNTRIES.find(c => c.id === id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[ch]));
+const fmt = n => Math.round(n).toLocaleString('ru-RU') + ' ₸';
+const roundPrice = n => Math.round(n / 1000) * 1000;
+function plural(n, one, few, many) {
+  const m10 = n % 10, m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+}
+const ageLabel = a => a === 0 ? 'до 1 года' : a + ' ' + plural(a, 'год', 'года', 'лет');
+const temp = t => (t > 0 ? '+' : t < 0 ? '−' : '') + Math.abs(t) + '°';
+const waLink = text => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+const scrollToEl = el => el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+const cssColors = c => `--c1:${c[0]};--c2:${c[1]}`;
+
+function bestMonths(c) {
+  const s = c.season, groups = [];
+  let start = null;
+  for (let i = 0; i < 12; i++) {
+    if (s[i] === 2 && start === null) start = i;
+    if ((s[i] !== 2 || i === 11) && start !== null) {
+      groups.push([start, s[i] === 2 ? i : i - 1]);
+      start = null;
+    }
+  }
+  if (groups.length > 1 && groups[0][0] === 0 && groups[groups.length - 1][1] === 11) {
+    const last = groups.pop();
+    groups[0] = [last[0], groups[0][1]];
+  }
+  return groups.map(([a, b]) => a === b ? MONTHS_SHORT[a] : MONTHS_SHORT[a] + '–' + MONTHS_SHORT[b]).join(', ');
+}
+
+let toastTimer;
+function showToast(msg, action) {
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.querySelector('button')?.remove();
+  if (action) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = action.label;
+    b.onclick = () => { t.classList.remove('show'); action.fn(); };
+    t.appendChild(b);
+  }
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), action ? 7000 : 3500);
+}
+
+/* ===================== Контакты из CONFIG ===================== */
+function applyConfig() {
+  $$('[data-cfg]').forEach(el => { el.textContent = CONFIG[el.dataset.cfg]; });
+  $$('[data-tel]').forEach(a => { a.href = 'tel:' + CONFIG.phoneRaw; });
+  $$('[data-mail]').forEach(a => { a.href = 'mailto:' + CONFIG.email; });
+  $$('[data-wa]').forEach(a => {
+    a.href = waLink(a.dataset.wa || 'Здравствуйте! Хочу подобрать тур.');
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+  $$('[data-tg]').forEach(a => { a.href = 'https://t.me/' + CONFIG.telegram; a.target = '_blank'; a.rel = 'noopener'; });
+  $$('[data-ig]').forEach(a => { a.href = 'https://instagram.com/' + CONFIG.instagram; a.target = '_blank'; a.rel = 'noopener'; });
+  $('#year').textContent = new Date().getFullYear();
+}
+
+/* ===================== Шапка ===================== */
+function initHeader() {
+  const header = $('#header'), nav = $('#nav'), burger = $('#burger');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 10);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  const setOpen = open => {
+    nav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  };
+  burger.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+  $$('a', nav).forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+}
+
+/* ===================== Подбор тура ===================== */
+const picker = { step: 1, adults: 2, kidsCount: 1 };
+const STEP_TITLES = ['Когда и откуда', 'Кто едет и бюджет', 'Какой отдых'];
+let lastResults = [], lastState = null;
+
+const chip = (type, name, value, label, checked) =>
+  `<label class="chip"><input type="${type}" name="${name}" value="${value}"${checked ? ' checked' : ''}><span>${label}</span></label>`;
+
+function buildPicker() {
+  $('#monthChips').innerHTML = MONTHS.map((m, i) => chip('radio', 'month', i, m)).join('');
+  $('#cityChips').innerHTML = CITIES.map((c, i) => chip('radio', 'city', c, c, i === 0)).join('');
+  $('#nightsChips').innerHTML = NIGHTS.map((n, i) => chip('radio', 'nights', i, n.label, i === 0)).join('');
+  $('#budgetChips').innerHTML = BUDGETS.map((b, i) => chip('radio', 'budget', i, b.label, i === 1)).join('');
+  $('#typeChips').innerHTML = TYPES.map(t => chip('checkbox', 'type', t.v, `<i aria-hidden="true">${t.icon}</i>${t.label}`)).join('');
+
+  const updAdults = () => {
+    $('#adultsOut').textContent = picker.adults;
+    $('#adultsMinus').disabled = picker.adults <= 1;
+    $('#adultsPlus').disabled = picker.adults >= 6;
+  };
+  const updKids = () => {
+    $('#kidsOut').textContent = picker.kidsCount;
+    $('#kidsMinus').disabled = picker.kidsCount <= 1;
+    $('#kidsPlus').disabled = picker.kidsCount >= 4;
+    renderKidAges();
+  };
+  $('#adultsMinus').onclick = () => { picker.adults = Math.max(1, picker.adults - 1); updAdults(); };
+  $('#adultsPlus').onclick = () => { picker.adults = Math.min(6, picker.adults + 1); updAdults(); };
+  $('#kidsMinus').onclick = () => { picker.kidsCount = Math.max(1, picker.kidsCount - 1); updKids(); };
+  $('#kidsPlus').onclick = () => { picker.kidsCount = Math.min(4, picker.kidsCount + 1); updKids(); };
+  $$('input[name=hasKids]').forEach(r => r.addEventListener('change', () => {
+    $('#kidsBox').hidden = r.value !== 'yes' || !r.checked;
+  }));
+  updAdults(); updKids();
+
+  const form = $('#pickerForm');
+  $$('[data-next]', form).forEach(b => b.addEventListener('click', () => { if (validateStep(picker.step)) showStep(picker.step + 1); }));
+  $$('[data-prev]', form).forEach(b => b.addEventListener('click', () => showStep(picker.step - 1)));
+  form.addEventListener('change', () => { $('#err' + picker.step).textContent = ''; });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!validateStep(3)) return;
+    showResults(readState());
+  });
+}
+
+function renderKidAges() {
+  const wrap = $('#kidAges');
+  const prev = $$('select', wrap).map(s => s.value);
+  wrap.innerHTML = Array.from({ length: picker.kidsCount }, (_, i) => `
+    <label>Ребёнок ${i + 1}
+      <select class="input" name="age${i}">
+        <option value="">Возраст</option>
+        ${Array.from({ length: 18 }, (_, a) => `<option value="${a}"${prev[i] === String(a) ? ' selected' : ''}>${ageLabel(a)}</option>`).join('')}
+      </select>
+    </label>`).join('');
+}
+
+function showStep(n) {
+  picker.step = n;
+  $$('.step').forEach(s => s.classList.toggle('is-active', +s.dataset.step === n));
+  $('#stepTitle').textContent = STEP_TITLES[n - 1];
+  $('#stepCount').textContent = `Шаг ${n} из 3`;
+  $('#progressFill').style.width = (n / 3 * 100) + '%';
+  $('#progressBar').setAttribute('aria-valuenow', n);
+  $$('#progressLabels li').forEach((li, i) => li.classList.toggle('done', i < n));
+  const card = $('#pickerForm');
+  if (card.getBoundingClientRect().top < 0) scrollToEl(card);
+}
+
+function validateStep(n) {
+  const st = readState();
+  let msg = '';
+  if (n === 1 && st.month === null) msg = 'Выберите месяц отдыха.';
+  if (n === 2 && st.kids.some(a => a === null)) msg = 'Укажите возраст каждого ребёнка — от него зависит цена.';
+  if (n === 3 && !st.types.length) msg = 'Выберите хотя бы один тип отдыха.';
+  $('#err' + n).textContent = msg;
+  return !msg;
+}
+
+function readState() {
+  const f = $('#pickerForm');
+  const val = name => f.querySelector(`input[name=${name}]:checked`)?.value;
+  const hasKids = val('hasKids') === 'yes';
+  return {
+    month: val('month') === undefined ? null : +val('month'),
+    city: val('city'),
+    nightsIdx: +val('nights'),
+    adults: picker.adults,
+    kids: hasKids ? $$('#kidAges select').map(s => s.value === '' ? null : +s.value) : [],
+    budgetIdx: +val('budget'),
+    types: $$('input[name=type]:checked', f).map(i => i.value)
+  };
+}
+
+/* 6.1. Расчёт ориентировочной цены */
+const kidCoef = age => age <= 1 ? 0.1 : age <= 11 ? 0.6 : 0.85;
+function calcPrice(c, st) {
+  const people = st.adults + st.kids.reduce((s, a) => s + kidCoef(a), 0);
+  return roundPrice(c.price * people * NIGHTS[st.nightsIdx].k);
+}
+
+/* 6.2. Оценка стран */
+function matchCountries(st) {
+  const budgetMax = BUDGETS[st.budgetIdx].max;
+  return COUNTRIES
+    .filter(c => c.season[st.month] > 0)
+    .map(c => {
+      const price = calcPrice(c, st);
+      let score = c.season[st.month] === 2 ? 60 : 30;
+      if (st.types.some(t => c.types.includes(t))) score += 20;
+      if (st.kids.length) score += c.kids ? 15 : -25;
+      const over = price - budgetMax;
+      if (over <= 0) score += 25;
+      else if (over <= budgetMax * 0.2) score += 5;
+      else score -= 30;
+      return { c, price, score, over };
+    })
+    .sort((a, b) => b.score - a.score || a.price - b.price)
+    .slice(0, 6);
+}
+
+function peopleText(st) {
+  let s = `${st.adults} ${plural(st.adults, 'взрослый', 'взрослых', 'взрослых')}`;
+  if (st.kids.length) s += ` + ${st.kids.length} ${plural(st.kids.length, 'ребёнок', 'ребёнка', 'детей')}`;
+  return s;
+}
+
+function showResults(st) {
+  lastState = st;
+  lastResults = matchCountries(st);
+  const box = $('#results');
+  const summary = [
+    MONTHS[st.month], 'из: ' + st.city, NIGHTS[st.nightsIdx].label + ' ночей', peopleText(st),
+    BUDGETS[st.budgetIdx].label, st.types.map(t => TYPES.find(x => x.v === t).label).join(', ')
+  ];
+  const head = `
+    <div class="results-head">
+      <div>
+        <h3>Куда поехать в ${MONTHS_IN[st.month]}</h3>
+        <ul class="summary-chips">${summary.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+      </div>
+      <button type="button" class="btn btn-outline btn-sm" id="editPicker">✎ Изменить параметры</button>
+    </div>`;
+
+  if (!lastResults.length) {
+    box.innerHTML = head + `
+      <div class="empty">
+        <div class="big">🤔</div>
+        <h3>По этим параметрам ничего не нашлось</h3>
+        <p>Напишите менеджеру — подберём вариант вручную или предложим другой месяц.</p>
+        <a class="btn btn-wa" href="${waLink('Здравствуйте! Помогите подобрать тур на ' + MONTHS[st.month].toLowerCase() + '.')}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Написать менеджеру</a>
+      </div>`;
+  } else {
+    const top = lastResults[0].score;
+    box.innerHTML = head + `<div class="cards">${lastResults.map((r, i) => {
+      const c = r.c, best = c.season[st.month] === 2;
+      const rank = i === 0 ? '🏆 Лучше всего подходит' : r.score >= top - 15 ? '👍 Отлично подходит' : '✨ Тоже хороший вариант';
+      const weather = `воздух ${temp(c.air[st.month])}` + (c.sea ? `, море ${temp(c.sea[st.month])}` : '');
+      return `
+      <article class="ccard" style="${cssColors(c.color)};animation-delay:${i * 60}ms">
+        <div class="ccard-top">
+          <span class="ccard-rank">${rank}</span>
+          <span class="ccard-ico" aria-hidden="true">${c.icon}</span>
+          <h3>${esc(c.name)}</h3><p>${esc(c.resort)}</p>
+        </div>
+        <div class="ccard-body">
+          <div class="badges">
+            <span class="badge ${best ? 'badge-best' : 'badge-good'}">${best ? '☀️ Лучший сезон' : '🌤 Хороший сезон'}</span>
+            ${c.kids ? '<span class="badge badge-kids">🧸 Для детей</span>' : ''}
+          </div>
+          <ul class="facts">
+            <li><span aria-hidden="true">🌡️</span><span>Погода: <b>${weather}</b></span></li>
+            <li><span aria-hidden="true">🛂</span><span>Виза для граждан РК: <b>${esc(c.visa)}</b>*</span></li>
+            <li><span aria-hidden="true">✈️</span><span>Перелёт из Астаны: <b>${esc(c.flight)}</b></span></li>
+          </ul>
+          <div class="price">
+            <small>Ориентировочно, ${NIGHTS[st.nightsIdx].label} ночей, ${peopleText(st)}</small>
+            <strong>≈ от ${fmt(r.price)}</strong> <span class="note">на всех</span>
+            <div class="badges" style="margin-top:8px">
+              ${r.over <= 0 ? '<span class="badge badge-ok">✓ В бюджете</span>' : `<span class="badge badge-over">Выше бюджета на ~${fmt(roundPrice(r.over))}</span>`}
+            </div>
+          </div>
+          <button class="btn btn-sun btn-block" type="button" data-want="${i}">Хочу этот тур</button>
+        </div>
+      </article>`;
+    }).join('')}</div>
+    <p class="note note-center">* Цены, визовые правила и время перелёта ориентировочные. ${DISCLAIMER} Точную цену назовёт менеджер.</p>`;
+  }
+  box.hidden = false;
+  $('#editPicker').onclick = () => { showStep(1); scrollToEl($('#pickerForm')); };
+  $$('[data-want]', box).forEach(b => b.addEventListener('click', () => {
+    const r = lastResults[+b.dataset.want];
+    openLead({
+      source: 'Подбор тура',
+      country: `${r.c.name} (${r.c.resort})`,
+      month: MONTHS[st.month],
+      city: st.city,
+      nights: NIGHTS[st.nightsIdx].label,
+      adults: st.adults,
+      kids: st.kids.length ? st.kids.map(ageLabel).join(', ') : 'нет',
+      budget: BUDGETS[st.budgetIdx].label,
+      types: st.types.map(t => TYPES.find(x => x.v === t).label).join(', '),
+      price: '≈ от ' + fmt(r.price)
+    });
+  }));
+  requestAnimationFrame(() => scrollToEl(box));
+}
+
+/* ===================== Окно заявки ===================== */
+const SUMMARY_FIELDS = [
+  ['country', 'Направление'], ['extra', 'Тур'], ['month', 'Месяц'], ['city', 'Город вылета'], ['nights', 'Ночей'],
+  ['adults', 'Взрослые'], ['kids', 'Дети (возраст)'], ['budget', 'Бюджет'], ['types', 'Тип отдыха'], ['price', 'Ориентир. цена']
+];
+let leadCtx = {};
+
+function openLead(ctx) {
+  leadCtx = ctx;
+  $('#leadSummary').innerHTML = SUMMARY_FIELDS
+    .filter(([k]) => ctx[k] !== undefined && ctx[k] !== '')
+    .map(([k, l]) => `<dt>${l}</dt><dd>${esc(ctx[k])}</dd>`).join('');
+  $('#leadSummary').hidden = !$('#leadSummary').innerHTML;
+  $('#leadForm').reset();
+  $$('#leadForm .field-err').forEach(e => e.textContent = '');
+  $$('#leadForm [aria-invalid]').forEach(e => e.removeAttribute('aria-invalid'));
+  $('#leadFormView').hidden = false;
+  $('#leadThanks').hidden = true;
+  $('#leadDialog').showModal();
+}
+
+function phoneDigits(v) {
+  let d = v.replace(/\D/g, '');
+  if (v.trim().startsWith('+7')) d = d.slice(1);
+  else if (d.length === 11 && (d[0] === '7' || d[0] === '8')) d = d.slice(1);
+  return d.slice(0, 10);
+}
+function formatPhone(d) {
+  let s = '+7';
+  if (d.length) s += ' (' + d.slice(0, 3);
+  if (d.length > 3) s += ') ' + d.slice(3, 6);
+  if (d.length > 6) s += '-' + d.slice(6, 8);
+  if (d.length > 8) s += '-' + d.slice(8, 10);
+  return s;
+}
+
+function setErr(input, errId, msg) {
+  $('#' + errId).textContent = msg;
+  if (msg) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid');
+  return !msg;
+}
+
+function leadText(l) {
+  const lines = ['Здравствуйте! Заявка с сайта ' + CONFIG.name, 'Источник: ' + l.source];
+  SUMMARY_FIELDS.forEach(([k, label]) => { if (l[k] !== undefined && l[k] !== '') lines.push(`${label}: ${l[k]}`); });
+  lines.push('', 'Имя: ' + l.name, 'Телефон: ' + l.phone);
+  if (l.email) lines.push('Email: ' + l.email);
+  if (l.comment) lines.push('Комментарий: ' + l.comment);
+  return lines.join('\n');
+}
+
+function initLeadForm() {
+  const phone = $('#fPhone');
+  phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+7 '; });
+  phone.addEventListener('blur', () => { if (phone.value.trim() === '+7') phone.value = ''; });
+  phone.addEventListener('input', () => { phone.value = formatPhone(phoneDigits(phone.value)); });
+
+  $('#leadForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const name = $('#fName').value.trim();
+    const digits = phoneDigits(phone.value);
+    const email = $('#fEmail').value.trim();
+    const consent = $('#fConsent').checked;
+    const checks = [
+      setErr($('#fName'), 'eName', name ? '' : 'Введите имя.'),
+      setErr(phone, 'ePhone', digits.length === 10 ? '' : 'Введите номер телефона полностью: +7 (XXX) XXX-XX-XX.'),
+      setErr($('#fEmail'), 'eEmail', !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '' : 'Проверьте email.'),
+      setErr($('#fConsent'), 'eConsent', consent ? '' : 'Нужно согласие на обработку персональных данных.')
+    ];
+    if (checks.includes(false)) {
+      $('#leadForm [aria-invalid="true"]')?.focus();
+      return;
+    }
+    const lead = {
+      ...leadCtx, id: Date.now(), createdAt: new Date().toISOString(), status: 'Новая',
+      name, phone: formatPhone(digits), email, comment: $('#fComment').value.trim()
+    };
+    saveLead(lead);
+    $('#thanksWa').href = waLink(leadText(lead));
+    $('#leadFormView').hidden = true;
+    $('#leadThanks').hidden = false;
+    $('#thanksWa').focus();
+  });
+}
+
+/* ===================== Хранилище заявок ===================== */
+const LEADS_KEY = 'skytravel_leads';
+function loadLeads() {
+  try { return JSON.parse(localStorage.getItem(LEADS_KEY)) || []; } catch { return []; }
+}
+function storeLeads(list) {
+  try { localStorage.setItem(LEADS_KEY, JSON.stringify(list)); } catch { /* хранилище недоступно — заявка уйдёт через WhatsApp */ }
+}
+function saveLead(lead) { const l = loadLeads(); l.unshift(lead); storeLeads(l); }
+
+/* ===================== Горящие туры ===================== */
+function renderHot() {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const tours = HOT_TOURS
+    .map(t => ({ ...t, days: Math.round((new Date(t.date + 'T00:00:00') - today) / 864e5) }))
+    .filter(t => t.days >= 0)
+    .sort((a, b) => a.days - b.days);
+  const box = $('#hotCards');
+  if (!tours.length) {
+    box.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="big">🔥</div><h3>Новые горящие туры скоро появятся</h3><p>Подпишитесь, чтобы узнать о них первыми.</p><a class="btn btn-wa" href="${waLink('Здравствуйте! Какие сейчас есть горящие туры?')}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Спросить в WhatsApp</a></div>`;
+    return;
+  }
+  box.innerHTML = tours.map((t, i) => {
+    const c = byId(t.country);
+    const when = t.days === 0 ? 'Вылет сегодня' : t.days === 1 ? 'Вылет завтра' : `Вылет через ${t.days} ${plural(t.days, 'день', 'дня', 'дней')}`;
+    const dateStr = new Date(t.date + 'T00:00:00').toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
+    const off = Math.round((1 - t.price / t.oldPrice) * 100);
+    return `
+    <article class="hcard" style="${cssColors(c.color)}">
+      <div class="hcard-top">
+        <span class="countdown">🔥 ${when}</span>
+        <span class="ccard-ico" aria-hidden="true">${c.icon}</span>
+        <h3>${esc(c.name)}</h3><p>${esc(t.resort)}</p>
+      </div>
+      <div class="hcard-body">
+        <div class="hotel">${esc(t.hotel)}</div>
+        <p class="hmeta">📅 ${dateStr} · из ${esc(t.from)} · ${t.nights} ${plural(t.nights, 'ночь', 'ночи', 'ночей')}<br>👥 ${esc(t.pax)}</p>
+        <div class="hprice"><s>${fmt(t.oldPrice)}</s><strong>${fmt(t.price)}</strong><span class="badge badge-hot">−${off}%</span></div>
+        <button class="btn btn-sun btn-block" type="button" data-hot="${i}">Забронировать</button>
+      </div>
+    </article>`;
+  }).join('');
+  $$('[data-hot]', box).forEach(b => b.addEventListener('click', () => {
+    const t = tours[+b.dataset.hot], c = byId(t.country);
+    const dateStr = new Date(t.date + 'T00:00:00').toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });
+    openLead({
+      source: 'Горящий тур',
+      country: `${c.name} (${t.resort})`,
+      extra: `${t.hotel}, вылет ${dateStr}`,
+      city: t.from,
+      nights: String(t.nights),
+      price: `${fmt(t.price)} ${t.pax}`
+    });
+  }));
+}
+
+/* ===================== Календарь сезонов ===================== */
+const SEASON_TEXT = ['не сезон', 'можно ехать', 'лучший сезон'];
+function renderCalendar() {
+  const head = `<thead><tr><th scope="col"><span class="visually-hidden">Страна</span></th>${MONTHS_SHORT.map((m, i) => `<th scope="col" title="${MONTHS[i]}">${m}</th>`).join('')}</tr></thead>`;
+  const body = COUNTRIES.map(c => `<tr><th scope="row">${c.icon} ${esc(c.id === 'hainan' ? 'Хайнань' : c.id === 'bali' ? 'Бали' : c.id === 'issykkul' ? 'Иссык-Куль' : c.name)}</th>${
+    c.season.map((s, m) => `<td><button type="button" class="s${s}" data-cid="${c.id}" data-m="${m}" aria-label="${esc(c.name)}, ${MONTHS[m].toLowerCase()}: ${SEASON_TEXT[s]}, воздух ${temp(c.air[m])}">${temp(c.air[m])}</button></td>`).join('')
+  }</tr>`).join('');
+  const table = $('#calTable');
+  table.innerHTML = head + `<tbody>${body}</tbody>`;
+  table.addEventListener('click', e => {
+    const b = e.target.closest('button[data-m]');
+    if (!b) return;
+    const m = +b.dataset.m, c = byId(b.dataset.cid);
+    const radio = $(`#pickerForm input[name=month][value="${m}"]`);
+    radio.checked = true;
+    $('#err1').textContent = '';
+    showStep(1);
+    scrollToEl($('#picker'));
+    showToast(`Месяц «${MONTHS[m]}» подставлен в подбор`, {
+      label: `Хочу ${c.to}`,
+      fn: () => openLead({ source: 'Календарь сезонов', country: `${c.name} (${c.resort})`, month: MONTHS[m] })
+    });
+  });
+}
+
+/* ===================== Тест ===================== */
+const quiz = { step: 0, scores: {} };
+function renderQuiz() {
+  const card = $('#quizCard');
+  if (quiz.step < QUIZ.length) {
+    const q = QUIZ[quiz.step];
+    card.innerHTML = `
+      <div class="quiz-dots" aria-hidden="true">${QUIZ.map((_, i) => `<i class="${i <= quiz.step ? 'on' : ''}"></i>`).join('')}</div>
+      <p class="note" style="margin-bottom:6px">Вопрос ${quiz.step + 1} из ${QUIZ.length}</p>
+      <p class="quiz-q">${q.q}</p>
+      <div class="quiz-opts">${q.a.map((a, i) => `<button type="button" class="quiz-opt" data-a="${i}"><i aria-hidden="true">${a.i}</i>${a.t}</button>`).join('')}</div>`;
+    $$('[data-a]', card).forEach(b => b.addEventListener('click', () => {
+      Object.entries(q.a[+b.dataset.a].p).forEach(([id, pts]) => { quiz.scores[id] = (quiz.scores[id] || 0) + pts; });
+      quiz.step++;
+      renderQuiz();
+      $('#quizCard button')?.focus({ preventScroll: true });
+    }));
+    return;
+  }
+  const winner = COUNTRIES.reduce((best, c) => (quiz.scores[c.id] || 0) > (quiz.scores[best.id] || 0) ? c : best, COUNTRIES[0]);
+  card.innerHTML = `
+    <div class="quiz-result" style="${cssColors(winner.color)}">
+      <div class="big" aria-hidden="true">${winner.icon}</div>
+      <h3>Вам ${winner.plural ? 'подойдут' : 'подойдёт'} ${winner.id === 'hainan' ? 'Хайнань' : winner.id === 'bali' ? 'Бали' : winner.id === 'issykkul' ? 'Иссык-Куль' : winner.name}!</h3>
+      <p>${winner.note}</p>
+      <p style="margin-top:10px">Лучшее время: ${bestMonths(winner)}</p>
+    </div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-sun" id="quizLead">Подобрать тур ${winner.to}</button>
+      <button type="button" class="btn btn-outline" id="quizAgain">Пройти ещё раз</button>
+    </div>`;
+  $('#quizLead').onclick = () => openLead({ source: 'Тест «Какой отдых вам подходит?»', country: `${winner.name} (${winner.resort})` });
+  $('#quizAgain').onclick = () => { quiz.step = 0; quiz.scores = {}; renderQuiz(); };
+}
+
+/* ===================== Семьям с детьми ===================== */
+function renderFamily() {
+  const list = COUNTRIES.filter(c => c.kids && c.sea).sort((a, b) => a.flightH - b.flightH).slice(0, 6);
+  $('#famCards').innerHTML = list.map(c => `
+    <article class="fcard" style="${cssColors(c.color)}">
+      <div class="fcard-ico" aria-hidden="true">${c.icon}</div>
+      <div>
+        <h3>${esc(c.name)}, ${esc(c.resort)}</h3>
+        <p>✈️ ${esc(c.flight)} · ☀️ ${bestMonths(c)}</p>
+        <button type="button" class="link-btn" data-fam="${c.id}">Хочу сюда с детьми →</button>
+      </div>
+    </article>`).join('');
+  $$('[data-fam]').forEach(b => b.addEventListener('click', () => {
+    const c = byId(b.dataset.fam);
+    openLead({ source: 'Семьям с детьми', country: `${c.name} (${c.resort})`, kids: 'да (укажите возраст в комментарии)' });
+  }));
+}
+
+/* ===================== Отзывы ===================== */
+function renderReviews() {
+  $('#revCards').innerHTML = REVIEWS.map(r => `
+    <article class="rcard">
+      <div class="rphoto" style="${cssColors(r.color)}" role="img" aria-label="Фото из поездки: ${esc(r.country)}">
+        <span aria-hidden="true">${r.icon}</span>
+        ${r.example ? '<span class="badge badge-example">пример</span>' : ''}
+      </div>
+      <div class="rbody">
+        <div class="rhead">
+          <span class="avatar" style="background:${r.color[0]}" aria-hidden="true">${esc(r.name[0])}</span>
+          <div><b>${esc(r.name)}</b><span>${esc(r.country)}</span></div>
+        </div>
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>${esc(r.text)}</p>
+      </div>
+    </article>`).join('');
+}
+
+/* ===================== Страница заявок (#admin) ===================== */
+const ADMIN_COLS = [
+  ['createdAt', 'Дата'], ['name', 'Имя'], ['phone', 'Телефон'], ['email', 'Email'], ['country', 'Страна'],
+  ['month', 'Месяц'], ['city', 'Город вылета'], ['nights', 'Ночи'], ['adults', 'Взрослые'], ['kids', 'Дети (возраст)'],
+  ['budget', 'Бюджет'], ['types', 'Тип отдыха'], ['comment', 'Комментарий'], ['source', 'Источник'], ['status', 'Статус']
+];
+const fmtDate = iso => new Date(iso).toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+const cellValue = (l, k) => {
+  if (k === 'createdAt') return fmtDate(l.createdAt);
+  if (k === 'country' && l.extra) return `${l.country} — ${l.extra}`;
+  return l[k] ?? '';
+};
+
+function renderAdmin() {
+  const leads = loadLeads();
+  $('#adminStats').innerHTML = `<li><b>${leads.length}</b>всего</li>` +
+    STATUSES.map(s => `<li><b>${leads.filter(l => l.status === s.v).length}</b>${s.v.toLowerCase()}</li>`).join('');
+  if (!leads.length) {
+    $('#adminTable').innerHTML = '<div class="admin-empty">Заявок пока нет. Они появятся здесь после отправки формы на этом устройстве.</div>';
+    return;
+  }
+  $('#adminTable').innerHTML = `<table class="leads">
+    <thead><tr>${ADMIN_COLS.map(([, l]) => `<th scope="col">${l}</th>`).join('')}</tr></thead>
+    <tbody>${leads.map(l => `<tr>${ADMIN_COLS.map(([k]) => {
+      if (k === 'status') {
+        const st = STATUSES.find(s => s.v === l.status) || STATUSES[0];
+        return `<td><select class="input ${st.cls}" data-status="${l.id}" aria-label="Статус заявки ${esc(l.name)}">${STATUSES.map(s => `<option${s.v === l.status ? ' selected' : ''}>${s.v}</option>`).join('')}</select></td>`;
+      }
+      if (k === 'phone') return `<td class="nowrap"><a href="tel:+7${phoneDigits(l.phone)}">${esc(l.phone)}</a></td>`;
+      return `<td${k === 'createdAt' ? ' class="nowrap"' : ''}>${esc(cellValue(l, k))}</td>`;
+    }).join('')}</tr>`).join('')}</tbody></table>`;
+  $$('[data-status]').forEach(sel => sel.addEventListener('change', () => {
+    const list = loadLeads();
+    const lead = list.find(l => String(l.id) === sel.dataset.status);
+    if (lead) { lead.status = sel.value; storeLeads(list); }
+    renderAdmin();
+  }));
+}
+
+function exportCsv() {
+  const leads = loadLeads();
+  if (!leads.length) { showToast('Заявок пока нет — выгружать нечего'); return; }
+  const q = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
+  const rows = [ADMIN_COLS.map(([, l]) => q(l)).join(';')]
+    .concat(leads.map(l => ADMIN_COLS.map(([k]) => q(cellValue(l, k))).join(';')));
+  const blob = new Blob(['﻿' + rows.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `zayavki-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+/* ===================== Роутинг и диалоги ===================== */
+let wasAdmin = false;
+function route() {
+  const admin = location.hash === '#admin';
+  document.body.classList.toggle('is-admin', admin);
+  if (admin) { renderAdmin(); scrollTo(0, 0); }
+  else if (wasAdmin) {
+    const target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView(); else scrollTo(0, 0);
+  }
+  wasAdmin = admin;
+}
+
+function initDialogs() {
+  $$('dialog').forEach(d => {
+    $$('[data-close]', d).forEach(b => b.addEventListener('click', () => d.close()));
+    d.addEventListener('click', e => { if (e.target === d) d.close(); });
+  });
+  document.addEventListener('click', e => {
+    const p = e.target.closest('[data-privacy]');
+    if (!p) return;
+    e.preventDefault();
+    $('#privacyDialog').showModal();
+  });
+}
+
+/* ===================== Запуск ===================== */
+applyConfig();
+initHeader();
+buildPicker();
+initLeadForm();
+initDialogs();
+renderHot();
+renderCalendar();
+renderQuiz();
+renderFamily();
+renderReviews();
+$('#csvBtn').addEventListener('click', exportCsv);
+addEventListener('hashchange', route);
+route();
+</script>
+</body>
+</html>
